@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Booster</title>
+    <meta name="description" content="TikTok Booster allocation dashboard.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SVG Icon Symbols Library -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="tiktok-coin-symbol" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="46" fill="#FFD034" />
+            <circle cx="50" cy="50" r="36" fill="#F49500" />
+            <circle cx="44" cy="58" r="12" fill="none" stroke="#FFFFFF" stroke-width="7" />
+            <rect x="51" y="24" width="7" height="34" fill="#FFFFFF" />
+            <path d="M51 24c8 0, 15 7, 15 15v1h-7v-1c0-4, -3-7, -8-7v-8z" fill="#FFFFFF" />
+        </symbol>
+    </svg>
+
+    <div class="app-wrapper">
+        <div class="app-container">
+            <!-- LEFT SIDEBAR -->
+            <aside class="sidebar">
+                <div>
+                    <div class="sidebar-header">
+                        <span class="header-tag">TARGET OVERVIEW</span>
+                    </div>
+                    <div class="profile-card" id="sidebar-profile-card">
+                        <div class="avatar-container">
+                            <img id="target-avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23ff007f'/><stop offset='100%' stop-color='%237f00ff'/></linearGradient></defs><rect width='100' height='100' fill='url(%23g)'/><text x='50%' y='60%' font-family='Inter, sans-serif' font-weight='bold' font-size='42' fill='%23ffffff' text-anchor='middle'>ع</text></svg>" alt="Profile Avatar">
+                        </div>
+                        <div class="profile-info">
+                            <h2 class="profile-name" id="target-name">a1ali</h2>
+                            <p class="profile-username" id="target-username">@a1ali</p>
+                            <p class="followers-text-row">
+                                <span class="followers-count" id="target-followers">470</span> followers
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="verified-footer">
+                    <svg class="icon-verified" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM10 16.5L6 12.5L7.5 11L10 13.5L16.5 7L18 8.5L10 16.5Z" fill="#10B981"/>
+                    </svg>
+                    <span class="verified-text">Verified Connection</span>
+                </div>
+            </aside>
+
+            <!-- RIGHT MAIN PANEL -->
+            <main class="main-panel">
+                <!-- VIEW 1: SELECT TIER -->
+                <section class="view active" id="view-select-tier">
+                    <div class="view-header">
+                        <h1>TikTok Booster</h1>
+                        <p class="subtitle">Select Tier</p>
+                    </div>
+                    <div class="bonus-banner">
+                        <p class="bonus-text">Includes 35% extra tier level bonus.</p>
+                    </div>
+                    <div class="tiers-grid" id="tiers-container">
+                        <button class="tier-card" data-tier="70" data-level="1"><div class="tier-card-main"><svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg><span class="tier-amount">70</span></div><span class="tier-level">Level 1</span></button>
+                        <button class="tier-card" data-tier="450" data-level="2"><div class="tier-card-main"><svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg><span class="tier-amount">450</span></div><span class="tier-level">Level 2</span></button>
+                        <button class="tier-card" data-tier="550" data-level="3"><div class="tier-card-main"><svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg><span class="tier-amount">550</span></div><span class="tier-level">Level 3</span></button>
+                        <button class="tier-card active" data-tier="750" data-level="4"><div class="tier-card-main"><svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg><span class="tier-amount">750</span></div><span class="tier-level">Level 4</span></button>
+                        <button class="tier-card" data-tier="1000" data-level="5"><div class="tier-card-main"><svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg><span class="tier-amount">1,000</span></div><span class="tier-level">Level 5</span></button>
+                        <button class="tier-card" data-tier="2000" data-level="6"><div class="tier-card-main"><svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg><span class="tier-amount">2,000</span></div><span class="tier-level">Level 6</span></button>
+                        <button class="tier-card" data-tier="15000" data-level="7"><div class="tier-card-main"><svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg><span class="tier-amount">15,000</span></div><span class="tier-level">Level 7</span></button>
+                        <button class="tier-card custom-card" data-tier="custom" id="tier-custom-btn"><div class="tier-card-main"><svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg></div><span class="tier-level">Custom</span></button>
+                    </div>
+                    <div class="input-section">
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <input type="text" id="username-input" value="a1ali" placeholder="Enter TikTok Username" autocomplete="off" spellcheck="false">
+                            <button class="search-btn" id="search-trigger-btn">
+                                <span class="btn-text">Load</span>
+                                <span class="spinner" id="search-spinner"></span>
+                            </button>
+                        </div>
+                        <div class="status-indicators">
+                            <p class="profile-status-msg" id="profile-status-message">Profile loaded for @a1ali</p>
+                            <div class="limited-time-badge">
+                                <span class="yellow-dot"></span>
+                                <span class="badge-text">Limited time active</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-btn-container">
+                        <button class="primary-btn" id="confirm-tier-btn">Confirm Level 4</button>
+                    </div>
+                </section>
+
+                <!-- VIEW 2: PERSONALIZED KEYPAD -->
+                <section class="view" id="view-personalized">
+                    <div class="view-header">
+                        <button class="back-link" id="back-to-tier-btn">
+                            <svg class="back-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 12H5M5 12L12 19M5 12L12 5"/>
+                            </svg>
+                            <span>Personalized</span>
+                        </button>
+                    </div>
+                    <div class="personalized-container">
+                        <div class="custom-amount-card">
+                            <span class="custom-amount-label">Amount</span>
+                            <div class="custom-amount-value-row">
+                                <svg class="coin-icon-large" width="32" height="32"><use href="#tiktok-coin-symbol"/></svg>
+                                <span class="custom-amount-display" id="custom-amount-val">0</span>
+                            </div>
+                            <span class="custom-amount-status">Rank status: Custom Tier</span>
+                        </div>
+                        <div class="keypad-grid" id="keypad">
+                            <button class="keypad-key" data-val="1">1</button>
+                            <button class="keypad-key" data-val="2">2</button>
+                            <button class="keypad-key" data-val="3">3</button>
+                            <button class="keypad-key" data-val="4">4</button>
+                            <button class="keypad-key" data-val="5">5</button>
+                            <button class="keypad-key" data-val="6">6</button>
+                            <button class="keypad-key" data-val="7">7</button>
+                            <button class="keypad-key" data-val="8">8</button>
+                            <button class="keypad-key" data-val="9">9</button>
+                            <button class="keypad-key icon-key" data-val="delete">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                                    <line x1="18" y1="9" x2="12" y2="15"/>
+                                    <line x1="12" y1="9" x2="18" y2="15"/>
+                                </svg>
+                            </button>
+                            <button class="keypad-key" data-val="0">0</button>
+                            <button class="keypad-key" data-val="000">000</button>
+                        </div>
+                    </div>
+                    <div class="action-btn-container">
+                        <button class="primary-btn" id="keypad-next-btn" disabled>Next</button>
+                    </div>
+                </section>
+
+                <!-- VIEW 3: DETAILS CONFIRMATION -->
+                <section class="view" id="view-details">
+                    <div class="view-header flex-header">
+                        <button class="back-link" id="back-to-custom-btn">
+                            <svg class="back-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 12H5M5 12L12 19M5 12L12 5"/>
+                            </svg>
+                            <span>Details</span>
+                        </button>
+                        <div class="secure-badge">
+                            <svg class="secure-icon" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 11l2 2 4-4"/>
+                            </svg>
+                            <span>Secure routing active</span>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="details-row">
+                            <span class="details-label">Target Account</span>
+                            <div class="details-value-profile">
+                                <img class="details-mini-avatar" id="details-avatar" src="#" alt="Target Avatar">
+                                <div class="details-profile-texts">
+                                    <span class="details-profile-name" id="details-name">a1ali</span>
+                                    <span class="details-profile-username" id="details-username">@a1ali</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details-row">
+                            <span class="details-label">Selected Tier</span>
+                            <div class="details-value-coins">
+                                <svg class="coin-icon-small" width="22" height="22"><use href="#tiktok-coin-symbol"/></svg>
+                                <span class="details-coins-val" id="details-coins">750</span>
+                            </div>
+                        </div>
+                        <div class="details-row">
+                            <span class="details-label">Server Cluster</span>
+                            <div class="details-value-text">
+                                <span class="details-server-text">Server Cluster Alpha</span>
+                            </div>
+                        </div>
+                        <div class="details-row">
+                            <span class="details-label">Direct Distribution Pipeline</span>
+                            <div class="details-value-action">
+                                <label class="switch-toggle">
+                                    <input type="checkbox" id="pipeline-checkbox" checked>
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="allocation-loader" id="allocation-loader">
+                        <div class="loader-content">
+                            <div class="spinner-large"></div>
+                            <p class="loader-text">Allocating package...</p>
+                        </div>
+                    </div>
+                    <div class="action-btn-container">
+                        <button class="primary-btn" id="complete-allocation-btn">Complete Allocation</button>
+                    </div>
+                </section>
+
+                <!-- VIEW 4: SUCCESS SCREEN -->
+                <section class="view" id="view-success">
+                    <div class="success-content">
+                        <div class="success-checkmark-wrapper">
+                            <svg class="success-checkmark-svg" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="36" fill="none" stroke="#10B981" stroke-width="4"/>
+                                <path d="M23 41L34 52L57 29" fill="none" stroke="#10B981" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h1 class="success-title">Allocation Successful!</h1>
+                        <p class="success-summary-text">
+                            <span class="success-amount" id="success-coins-amount">750</span> coins assigned to <span class="success-username" id="success-target-username">@a1ali</span>.
+                        </p>
+                        <div class="delivery-card">
+                            <div class="delivery-date-row">
+                                <span class="delivery-label">Estimated Delivery:</span>
+                                <span class="delivery-date" id="success-delivery-date">Thursday, June 11, 2026</span>
+                            </div>
+                            <p class="delivery-note">This action is finished. Update will reflect soon.</p>
+                        </div>
+                    </div>
+                    <div class="action-btn-container">
+                        <button class="primary-btn" id="accept-success-btn">Accept</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- عنصر الصوت لـ Apple Pay -->
+    <audio id="successSound" src="applepay.mp3" preload="auto"></audio>
+
+    <!-- ربط ملف الجافا سكريبت -->
+    <script src="app.js"></script>
+</body>
+</html>
